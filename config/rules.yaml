@@ -1,0 +1,207 @@
+# star-pilot triage rules
+# each list has: description, keywords (matched against repo topics/description/language)
+# priority: first match wins; higher-weight keywords break ties
+
+lists:
+  01_ai_nexus:
+    description: "LLM, Agent, ML Frameworks, Diffusion, Inference, Fine-tune, Datasets"
+    description_cn: "大模型、Agent、ML 框架、扩散模型、推理、微调、数据集"
+    keywords:
+      - llm
+      - pytorch
+      - transformers
+      - diffusion
+      - stable-diffusion
+      - agent
+      - multi-agent
+      - mcp
+      - model-context-protocol
+      - openai
+      - chatgpt
+      - claude
+      - gemini
+      - langchain
+      - deep-learning
+      - machine-learning
+      - neural-network
+      - inference
+      - fine-tuning
+      - lora
+      - peft
+      - quantization
+      - rag
+      - embedding
+      - huggingface
+      - tensor
+      - cuda
+      - gpu
+      - training
+      - computer-vision
+      - nlp
+      - speech
+      - tts
+      - ocr
+      - reinforcement-learning
+    language_hints:
+      - Jupyter Notebook
+
+  02_core_infra:
+    description: "Compilers, HPC, CUDA, Profiling, GPU, Memory, System Tools"
+    description_cn: "编译器、高性能计算、CUDA、性能分析、GPU、内存、系统工具"
+    keywords:
+      - compiler
+      - hpc
+      - kernel
+      - ebpf
+      - bpf
+      - profiler
+      - profiling
+      - flamegraph
+      - tracing
+      - memory
+      - allocator
+      - parallel
+      - concurrency
+      - simd
+      - llvm
+      - mlir
+      - assembly
+      - operating-system
+      - driver
+      - reverse-engineering
+      - exploit
+      - gdb
+      - debugger
+      - performance-analysis
+      - benchmark
+    language_hints:
+      - MLIR
+      - Assembly
+      - Cuda
+
+  03_dev_libs:
+    description: "Python/C++ Libraries, SDKs, Parsers, Data Validation, SQL"
+    description_cn: "Python/C++ 开发库、SDK、解析器、数据校验、SQL"
+    keywords:
+      - sdk
+      - framework
+      - middleware
+      - web-api
+      - pydantic
+      - fastapi
+      - sqlalchemy
+      - validation
+      - parser
+      - linter
+      - formatter
+      - static-analysis
+      - type-check
+      - testing
+      - test-framework
+      - coverage
+      - pre-commit
+      - hooks
+      - decorator
+      - scraping
+      - crawler
+      - web-server
+      - http
+      - proxy
+
+  04_ops_apps:
+    description: "CLI Tools, Terminal, Editors, Desktop Apps, Self-hosted Services"
+    description_cn: "CLI 工具、终端、编辑器、桌面应用、自托管服务"
+    keywords:
+      - cli
+      - terminal
+      - shell
+      - command-line
+      - productivity
+      - editor
+      - neovim
+      - vim
+      - vscode
+      - docker
+      - container
+      - k8s
+      - kubernetes
+      - self-hosted
+      - desktop
+      - gui
+      - macos
+      - macos-app
+      - window-management
+      - downloader
+      - reader
+      - ebook
+      - music
+      - media
+      - package-manager
+
+  05_ui_design:
+    description: "Frontend Frameworks, Graphics, Fonts, Game Engines, Design"
+    description_cn: "前端框架、图形、字体、游戏引擎、设计系统"
+    keywords:
+      - font
+      - typeface
+      - icons
+      - design-system
+      - figma
+      - tailwind
+      - css
+      - react
+      - swiftui
+      - swift
+      - ui
+      - animation
+      - pixel-art
+      - game-engine
+      - gamedev
+      - game-development
+      - graphics
+      - opengl
+      - webgl
+      - webgpu
+      - sprite
+      - static-site-generator
+
+  06_res_vault:
+    description: "Roadmaps, Tutorials, Courses, Awesome Lists, Cookbooks"
+    description_cn: "路线图、教程、课程、Awesome 列表、Cookbook"
+    keywords:
+      - awesome
+      - awesome-list
+      - roadmap
+      - tutorial
+      - course
+      - book
+      - education
+      - learning
+      - interview
+      - cookbook
+      - demo
+      - example
+      - sample
+      - guide
+      - cheatsheet
+      - reference
+      - curated
+
+  07_lab_wild:
+    description: "Experimental, Creative, Personal, Uncategorized"
+    description_cn: "实验性项目、创意项目、个人项目、未分类"
+    keywords:
+      - experimental
+      - creative
+      - fun
+      - unusual
+      - personal
+      - hobby
+
+# repos that should always go to a specific list regardless of keywords
+overrides:
+  # force specific repos into lists
+  # "owner/repo": "list_name"
+  "host452b/taikoei": "07_lab_wild"
+  "host452b/codet": "04_ops_apps"
+  "host452b/pprobe_example": "03_dev_libs"

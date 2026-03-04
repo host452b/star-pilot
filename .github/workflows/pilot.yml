@@ -1,0 +1,76 @@
+name: Star Pilot — Triage & Portal
+
+on:
+  # trigger when you star a new repo
+  watch:
+    types: [started]
+
+  # scheduled: runs every Monday at 08:00 UTC
+  schedule:
+    - cron: "0 8 * * 1"
+
+  # manual trigger from Actions tab
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "run mode"
+        required: true
+        default: "readme"
+        type: choice
+        options:
+          - triage
+          - readme
+          - migrate
+
+permissions:
+  contents: write
+
+env:
+  GITHUB_TOKEN: ${{ secrets.GH_PAT }}
+  OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+
+jobs:
+  pilot:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+
+      - name: setup python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+
+      - name: install dependencies
+        run: pip install -r requirements.txt
+
+      - name: setup gh CLI auth
+        run: echo "${{ secrets.GH_PAT }}" | gh auth login --with-token
+
+      - name: determine run mode
+        id: mode
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "cmd=${{ inputs.mode }}" >> $GITHUB_OUTPUT
+          elif [ "${{ github.event_name }}" = "watch" ]; then
+            echo "cmd=readme" >> $GITHUB_OUTPUT
+          else
+            echo "cmd=readme" >> $GITHUB_OUTPUT
+          fi
+
+      - name: run star-pilot
+        run: python main.py ${{ steps.mode.outputs.cmd }}
+
+      - name: commit and push portal
+        run: |
+          git config user.name "star-pilot[bot]"
+          git config user.email "star-pilot[bot]@users.noreply.github.com"
+          git add output/
+          if git diff --cached --quiet; then
+            echo "no changes to commit"
+          else
+            git commit -m "chore(portal): update star navigator"
+            git push
+          fi
