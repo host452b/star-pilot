@@ -1,6 +1,20 @@
+<div align="center">
+
 # ⭐ Star Pilot — GitHub Star Navigator
 
-> auto-generated knowledge portal — organized by [star-pilot](https://github.com/host452b/star-pilot)
+**An auto-generated knowledge portal of curated GitHub stars,
+classified into 7 structured categories using keyword-based triage.**
+
+[![Portal](https://img.shields.io/badge/stars_classified-126-yellow?logo=github)](https://github.com/host452b/star-pilot)
+[![CN Portal](https://img.shields.io/badge/中文门户-README__CN-blue)](README_CN.md)
+
+[中文版](README_CN.md) · [Back to Star Pilot](https://github.com/host452b/star-pilot)
+
+</div>
+
+---
+
+## Quick Navigation
 
 | section | count | description |
 | :--- | :---: | :--- |
@@ -12,7 +26,7 @@
 | [06_res_vault](#06-res-vault) | 4 | Roadmaps, Tutorials, Courses, Awesome Lists, Cookbooks |
 | [07_lab_wild](#07-lab-wild) | 9 | Experimental, Creative, Personal, Uncategorized |
 
-**total: 126 starred repos** | last updated: 2026-03-04 15:52 UTC
+> **126 starred repos** · last updated: 2026-03-04 15:56 UTC
 
 ---
 ## 01_ai_nexus
@@ -21,9 +35,9 @@
 
 | project | description | stars | lang |
 | :--- | :--- | :---: | :--- |
-| [langchain-ai/langchain](https://github.com/langchain-ai/langchain) | The agent engineering platform | ⭐ 128202 | Python |
+| [langchain-ai/langchain](https://github.com/langchain-ai/langchain) | The agent engineering platform | ⭐ 128205 | Python |
 | [google-gemini/gemini-cli](https://github.com/google-gemini/gemini-cli) | An open-source AI agent that brings the power of Gemini directly into your terminal. | ⭐ 96415 | TypeScript |
-| [vllm-project/vllm](https://github.com/vllm-project/vllm) | A high-throughput and memory-efficient inference and serving engine for LLMs | ⭐ 71918 | Python |
+| [vllm-project/vllm](https://github.com/vllm-project/vllm) | A high-throughput and memory-efficient inference and serving engine for LLMs | ⭐ 71919 | Python |
 | [openai/openai-cookbook](https://github.com/openai/openai-cookbook) | Examples and guides for using the OpenAI API | ⭐ 71813 | Jupyter Notebook |
 | [labmlai/annotated_deep_learning_paper_implementations](https://github.com/labmlai/annotated_deep_learning_paper_implementations) | 🧑‍🏫 60+ Implementations/tutorials of deep learning papers with side-by-side notes 📝; including transformers (original, xl, switch, feedback, vit, ...), optimizers (adam, adabelief, sophia, ...), gans(cyclegan, stylegan2, ...), 🎮 reinforcement learning (ppo, dqn), capsnet, distillation, ... 🧠 | ⭐ 65856 | Python |
 | [FoundationAgents/MetaGPT](https://github.com/FoundationAgents/MetaGPT) | 🌟 The Multi-Agent Framework: First AI Software Company, Towards Natural Language Programming | ⭐ 64760 | Python |
@@ -40,8 +54,8 @@
 | [Lightning-AI/pytorch-lightning](https://github.com/Lightning-AI/pytorch-lightning) | Pretrain, finetune ANY AI model of ANY size on 1 or 10,000+ GPUs with zero code changes. | ⭐ 30895 | Python |
 | [microsoft/semantic-kernel](https://github.com/microsoft/semantic-kernel) | Integrate cutting-edge LLM technology quickly and easily into your apps | ⭐ 27354 | C# |
 | [modular/modular](https://github.com/modular/modular) | The Modular Platform (includes MAX & Mojo) | ⭐ 25663 | Mojo |
-| [mlflow/mlflow](https://github.com/mlflow/mlflow) | The open source developer platform to build AI agents and models with confidence. Enhance your AI applications with end-to-end tracking, observability, and evaluations, all in one integrated platform. | ⭐ 24540 | Python |
-| [sgl-project/sglang](https://github.com/sgl-project/sglang) | SGLang is a high-performance serving framework for large language models and multimodal models. | ⭐ 24076 | Python |
+| [mlflow/mlflow](https://github.com/mlflow/mlflow) | The open source developer platform to build AI agents and models with confidence. Enhance your AI applications with end-to-end tracking, observability, and evaluations, all in one integrated platform. | ⭐ 24541 | Python |
+| [sgl-project/sglang](https://github.com/sgl-project/sglang) | SGLang is a high-performance serving framework for large language models and multimodal models. | ⭐ 24075 | Python |
 | [a2aproject/A2A](https://github.com/a2aproject/A2A) | Agent2Agent (A2A) is an open protocol enabling communication and interoperability between opaque agentic applications. | ⭐ 22267 | Shell |
 | [huggingface/datasets](https://github.com/huggingface/datasets) | 🤗 The largest hub of ready-to-use datasets for AI models with fast, easy-to-use and efficient data manipulation tools | ⭐ 21246 | Python |
 | [huggingface/peft](https://github.com/huggingface/peft) | 🤗 PEFT: State-of-the-art Parameter-Efficient Fine-Tuning. | ⭐ 20721 | Python |
@@ -76,6 +90,10 @@
 | [NVIDIA/trt-samples-for-hackathon-cn](https://github.com/NVIDIA/trt-samples-for-hackathon-cn) | Simple samples for TensorRT programming | ⭐ 1659 | Python |
 | [edbeeching/godot_rl_agents](https://github.com/edbeeching/godot_rl_agents) | An Open Source package that allows video game creators, AI researchers and hobbyists the opportunity to learn complex behaviors for their Non Player Characters or agents | ⭐ 1382 | Python |
 
+[🔝 Top](#quick-navigation) · [⬇ 02_core_infra](#02-core-infra)
+
+---
+
 ## 02_core_infra
 
 > Compilers, HPC, CUDA, Profiling, GPU, Memory, System Tools
@@ -97,21 +115,25 @@
 | [gaogaotiantian/viztracer](https://github.com/gaogaotiantian/viztracer) | A debugging and profiling tool that can trace and visualize python code execution | ⭐ 7565 | Python |
 | [google/perfetto](https://github.com/google/perfetto) | Production-grade client-side tracing, profiling, and analysis for complex software systems. | ⭐ 5608 | C++ |
 
+[⬆ 01_ai_nexus](#01-ai-nexus) · [🔝 Top](#quick-navigation) · [⬇ 03_dev_libs](#03-dev-libs)
+
+---
+
 ## 03_dev_libs
 
 > Python/C++ Libraries, SDKs, Parsers, Data Validation, SQL
 
 | project | description | stars | lang |
 | :--- | :--- | :---: | :--- |
-| [caddyserver/caddy](https://github.com/caddyserver/caddy) | Fast and extensible multi-platform HTTP/1-2-3 web server with automatic HTTPS | ⭐ 70545 | Go |
+| [caddyserver/caddy](https://github.com/caddyserver/caddy) | Fast and extensible multi-platform HTTP/1-2-3 web server with automatic HTTPS | ⭐ 70547 | Go |
 | [withastro/astro](https://github.com/withastro/astro) | The web framework for content-driven websites. ⭐️ Star to support our work! | ⭐ 57262 | TypeScript |
 | [docling-project/docling](https://github.com/docling-project/docling) | Get your documents ready for gen AI | ⭐ 54824 | Python |
 | [astral-sh/ruff](https://github.com/astral-sh/ruff) | An extremely fast Python linter and code formatter, written in Rust. | ⭐ 46091 | Rust |
-| [pydantic/pydantic](https://github.com/pydantic/pydantic) | Data validation using Python type hints | ⭐ 27075 | Python |
+| [pydantic/pydantic](https://github.com/pydantic/pydantic) | Data validation using Python type hints | ⭐ 27077 | Python |
 | [modelcontextprotocol/python-sdk](https://github.com/modelcontextprotocol/python-sdk) | The official Python SDK for Model Context Protocol servers and clients | ⭐ 21959 | Python |
 | [catchorg/Catch2](https://github.com/catchorg/Catch2) | A modern, C++-native, test framework for unit-tests, TDD and BDD - using C++14, C++17 and later (C++11 support is in v2.x branch, and C++03 on the Catch1.x branch) | ⭐ 20212 | C++ |
 | [fastapi/sqlmodel](https://github.com/fastapi/sqlmodel) | SQL databases in Python, designed for simplicity, compatibility, and robustness. | ⭐ 17693 | Python |
-| [pre-commit/pre-commit](https://github.com/pre-commit/pre-commit) | A framework for managing and maintaining multi-language pre-commit hooks. | ⭐ 15076 | Python |
+| [pre-commit/pre-commit](https://github.com/pre-commit/pre-commit) | A framework for managing and maintaining multi-language pre-commit hooks. | ⭐ 15079 | Python |
 | [py-pdf/pypdf](https://github.com/py-pdf/pypdf) | A pure-python PDF library capable of splitting, merging, cropping, and transforming the pages of PDF files | ⭐ 9848 | Python |
 | [doctest/doctest](https://github.com/doctest/doctest) | The fastest feature-rich C++11/14/17/20/23 single-header testing framework | ⭐ 6638 | C++ |
 | [autoscrape-labs/pydoll](https://github.com/autoscrape-labs/pydoll) | Pydoll is a library for automating chromium-based browsers without a WebDriver, offering realistic interactions. | ⭐ 6621 | Python |
@@ -120,14 +142,18 @@
 | [pytest-dev/pluggy](https://github.com/pytest-dev/pluggy) | A minimalist production ready plugin system | ⭐ 1579 | Python |
 | [host452b/pprobe_example](https://github.com/host452b/pprobe_example) | pprobe_example | ⭐ 1 | Python |
 
+[⬆ 02_core_infra](#02-core-infra) · [🔝 Top](#quick-navigation) · [⬇ 04_ops_apps](#04-ops-apps)
+
+---
+
 ## 04_ops_apps
 
 > CLI Tools, Terminal, Editors, Desktop Apps, Self-hosted Services
 
 | project | description | stars | lang |
 | :--- | :--- | :---: | :--- |
-| [tauri-apps/tauri](https://github.com/tauri-apps/tauri) | Build smaller, faster, and more secure desktop and mobile applications with a web frontend. | ⭐ 103604 | Rust |
-| [alacritty/alacritty](https://github.com/alacritty/alacritty) | A cross-platform, OpenGL terminal emulator. | ⭐ 62769 | Rust |
+| [tauri-apps/tauri](https://github.com/tauri-apps/tauri) | Build smaller, faster, and more secure desktop and mobile applications with a web frontend. | ⭐ 103605 | Rust |
+| [alacritty/alacritty](https://github.com/alacritty/alacritty) | A cross-platform, OpenGL terminal emulator. | ⭐ 62771 | Rust |
 | [isocpp/CppCoreGuidelines](https://github.com/isocpp/CppCoreGuidelines) | The C++ Core Guidelines are a set of tried-and-true guidelines, rules, and best practices about coding in C++ | ⭐ 44815 | CSS |
 | [imputnet/cobalt](https://github.com/imputnet/cobalt) | best way to save what you love | ⭐ 38987 | Svelte |
 | [waydabber/BetterDisplay](https://github.com/waydabber/BetterDisplay) | Unlock your displays on your Mac! Flexible HiDPI scaling, XDR/HDR extra brightness, virtual screens, DDC control, extra dimming, PIP/streaming, EDID override and lots more! | ⭐ 30141 |  |
@@ -143,6 +169,10 @@
 | [conan-io/conan](https://github.com/conan-io/conan) | Conan - The open-source C and C++ package manager | ⭐ 9253 | Python |
 | [Beingpax/VoiceInk](https://github.com/Beingpax/VoiceInk) | Voice-to-text app for macOS to transcribe what you say to text almost instantly | ⭐ 4064 | Swift |
 | [host452b/codet](https://github.com/host452b/codet) | codet is a command-line tool for analyzing the code commit trail to understand how this feature work, leverage tools like cursor/windsurf/trae/LLMs-tool to provide a foundation for project or feature fast warm-up | ⭐ 1 | Python |
+
+[⬆ 03_dev_libs](#03-dev-libs) · [🔝 Top](#quick-navigation) · [⬇ 05_ui_design](#05-ui-design)
+
+---
 
 ## 05_ui_design
 
@@ -161,7 +191,11 @@
 | [Orama-Interactive/Pixelorama](https://github.com/Orama-Interactive/Pixelorama) | Unleash your creativity with Pixelorama, a powerful and accessible open-source pixel art multitool. Whether you want to create sprites, tiles, animations, or just express yourself in the language of pixel art, this software will realize your pixel-perfect dreams with a vast toolbox of features. Available on Windows, Linux, macOS and the Web! | ⭐ 9206 | GDScript |
 | [lapce/floem](https://github.com/lapce/floem) | A native Rust UI library with fine-grained reactivity | ⭐ 4038 | Rust |
 | [gdquest-demos/godot-open-rpg](https://github.com/gdquest-demos/godot-open-rpg) | Learn to create turn-based combat with this Open Source RPG demo ⚔ | ⭐ 2605 | GDScript |
-| [GDQuest/learn-gdscript](https://github.com/GDQuest/learn-gdscript) | Learn Godot's GDScript programming language from zero, right in your browser, for free. | ⭐ 2593 | GDScript |
+| [GDQuest/learn-gdscript](https://github.com/GDQuest/learn-gdscript) | Learn Godot's GDScript programming language from zero, right in your browser, for free. | ⭐ 2594 | GDScript |
+
+[⬆ 04_ops_apps](#04-ops-apps) · [🔝 Top](#quick-navigation) · [⬇ 06_res_vault](#06-res-vault)
+
+---
 
 ## 06_res_vault
 
@@ -174,6 +208,10 @@
 | [godotengine/awesome-godot](https://github.com/godotengine/awesome-godot) | A curated list of free/libre plugins, scripts and add-ons for Godot | ⭐ 9469 |  |
 | [godotengine/godot-demo-projects](https://github.com/godotengine/godot-demo-projects) | Demonstration and Template Projects | ⭐ 8299 | GDScript |
 
+[⬆ 05_ui_design](#05-ui-design) · [🔝 Top](#quick-navigation) · [⬇ 07_lab_wild](#07-lab-wild)
+
+---
+
 ## 07_lab_wild
 
 > Experimental, Creative, Personal, Uncategorized
@@ -182,10 +220,14 @@
 | :--- | :--- | :---: | :--- |
 | [astral-sh/uv](https://github.com/astral-sh/uv) | An extremely fast Python package and project manager, written in Rust. | ⭐ 80252 | Rust |
 | [jingyaogong/minimind](https://github.com/jingyaogong/minimind) | 🚀🚀 「大模型」2小时完全从0训练26M的小参数GPT！🌏 Train a 26M-parameter GPT from scratch in just 2h! | ⭐ 40414 | Python |
-| [casey/just](https://github.com/casey/just) | 🤖 Just a command runner | ⭐ 31831 | Rust |
+| [casey/just](https://github.com/casey/just) | 🤖 Just a command runner | ⭐ 31832 | Rust |
 | [ChartsOrg/Charts](https://github.com/ChartsOrg/Charts) | Beautiful charts for iOS/tvOS/OSX! The Apple side of the crossplatform MPAndroidChart. | ⭐ 28011 | Swift |
 | [microsoft/pyright](https://github.com/microsoft/pyright) | Static Type Checker for Python | ⭐ 15274 | Python |
 | [ahmedkhaleel2004/gitdiagram](https://github.com/ahmedkhaleel2004/gitdiagram) | Free, simple, fast interactive diagrams for any GitHub repository | ⭐ 15208 | TypeScript |
 | [microsoft/data-formulator](https://github.com/microsoft/data-formulator) | 🪄 Create rich visualizations with AI | ⭐ 15107 | TypeScript |
 | [vega/altair](https://github.com/vega/altair) | Declarative visualization library for Python | ⭐ 10281 | Python |
 | [KellerJordan/modded-nanogpt](https://github.com/KellerJordan/modded-nanogpt) | NanoGPT (124M) in 2 minutes | ⭐ 4727 | Python |
+
+[⬆ 06_res_vault](#06-res-vault) · [🔝 Top](#quick-navigation)
+
+---
