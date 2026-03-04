@@ -67,6 +67,9 @@ python main.py readme
 # migrate: create GitHub star lists + assign all repos via GraphQL
 python main.py migrate
 
+# full pipeline: triage + readme + migrate in one run
+python main.py full
+
 # cleanup: delete all star lists (stars themselves are preserved)
 python main.py cleanup
 ```
@@ -83,21 +86,32 @@ python main.py cleanup
 
 ## GitHub Actions Automation
 
-The workflow (`.github/workflows/pilot.yml`) supports three triggers:
+The workflow (`.github/workflows/pilot.yml`) runs entirely on GitHub-hosted runners using `gh` CLI (pre-installed) for all API calls.
 
-| Trigger | Event | Action |
+| Trigger | Schedule | Action |
 | :--- | :--- | :--- |
-| New star | `watch` | Regenerate portal |
-| Weekly | CRON Mon 08:00 UTC | Regenerate portal |
-| Manual | `workflow_dispatch` | Choose `triage` / `readme` / `migrate` |
+| Weekday | CRON Mon-Fri 08:00 UTC | `readme` — regenerate portal |
+| Sunday | CRON Sun 08:00 UTC | `full` — triage + readme + migrate |
+| Manual | `workflow_dispatch` | Choose `triage` / `readme` / `migrate` / `full` / `cleanup` |
 
-**Required secrets:** `GH_PAT` (with `user` scope). **Optional:** `OPENAI_API_KEY` for Chinese translations.
+**What happens each run:**
+1. Fetches all starred repos via GitHub REST API (`gh api --paginate`)
+2. Classifies using keyword engine
+3. Generates dual-language portal
+4. Commits & pushes changes back to repo (if any)
+5. Writes a Job Summary visible in the Actions tab
+
+**Required secrets:**
+- `GH_PAT` — Personal Access Token with `user` + `repo` scope (for star list GraphQL mutations and pushing commits)
+- `OPENAI_API_KEY` — *(optional)* for Chinese translation via OpenAI API
+
+Translation results are cached across runs via `actions/cache` to avoid redundant API calls.
 
 ## Project Structure
 
 ```
 star-pilot/
-├── main.py                         # CLI entry point (4 commands)
+├── main.py                         # CLI entry point (5 commands)
 ├── config/rules.yaml               # keyword mapping rules (22 -> 7 lists)
 ├── src/
 │   ├── gh_client.py                # GitHub REST + GraphQL API wrapper
