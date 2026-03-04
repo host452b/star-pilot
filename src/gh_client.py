@@ -133,7 +133,7 @@ class GitHubClient:
         cmd = ["gh", "api", "graphql", "-f", f"query={query}"]
         if variables:
             for k, v in variables.items():
-                cmd.extend(["-f", f"{k}={v}"])
+                cmd.extend(["-F", f"{k}={v}"])
         result = subprocess.run(cmd, capture_output=True, text=True, timeout=30)
         if result.returncode != 0:
             raise RuntimeError(f"graphql failed: {result.stderr}")
@@ -159,22 +159,22 @@ class GitHubClient:
         return [StarList(**n) for n in nodes]
 
     def create_list(self, name: str, description: str) -> StarList:
-        query = f"""mutation {{
-            createUserList(input: {{name: "{name}", description: "{description}"}}) {{
-                list {{ id name description }}
-            }}
-        }}"""
-        data = self._graphql(query)
+        query = """mutation($name: String!, $desc: String!) {
+            createUserList(input: {name: $name, description: $desc}) {
+                list { id name description }
+            }
+        }"""
+        data = self._graphql(query, variables={"name": name, "desc": description})
         node = data["data"]["createUserList"]["list"]
         return StarList(**node)
 
     def delete_list(self, list_id: str) -> None:
-        query = f"""mutation {{
-            deleteUserList(input: {{listId: "{list_id}"}}) {{
+        query = """mutation($listId: ID!) {
+            deleteUserList(input: {listId: $listId}) {
                 clientMutationId
-            }}
-        }}"""
-        self._graphql(query)
+            }
+        }"""
+        self._graphql(query, variables={"listId": list_id})
 
     def get_repo_node_id(self, full_name: str) -> str | None:
         if self._use_cli:
@@ -192,14 +192,16 @@ class GitHubClient:
             return resp.json().get("node_id")
 
     def add_repo_to_list(self, list_id: str, repo_node_id: str) -> bool:
-        query = f"""mutation {{
-            updateUserListsForItem(input: {{
-                itemId: "{repo_node_id}",
-                listIds: ["{list_id}"]
-            }}) {{ clientMutationId }}
-        }}"""
+        query = """mutation($itemId: ID!, $listIds: [ID!]!) {
+            updateUserListsForItem(input: {itemId: $itemId, listIds: $listIds}) {
+                clientMutationId
+            }
+        }"""
         try:
-            data = self._graphql(query)
+            data = self._graphql(
+                query,
+                variables={"itemId": repo_node_id, "listIds": json.dumps([list_id])},
+            )
             return "clientMutationId" in str(data)
         except Exception as e:
             logger.warning(f"failed to add repo to list: {e}")

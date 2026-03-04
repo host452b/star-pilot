@@ -1,6 +1,11 @@
 __pycache__/
 *.pyc
 .env
+.env.*
+.env.local
+*.key
+*.pem
+*.secret
 output/.translation_cache.json
 .venv/
 *.egg-info/
